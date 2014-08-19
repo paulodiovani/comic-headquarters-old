@@ -9,17 +9,22 @@ module.exports = (grunt) ->
       gruntfile:
         files: ['Gruntfile.coffee']
         tasks: ['coffeelint:gruntfile']
-
-      makecoffee:
-        files: ['src/**/*.coffee']
-        tasks: ['coffeelint:sources', 'coffee:node', 'coffee:browser']
+      node:
+        files: ['controllers/coffee/**/*.coffee']
+        tasks: ['coffeelint:node', 'coffee:node',]
+        options:
+          spawn: false
+      browser:
+        files: ['public/coffee/**/*.coffee']
+        tasks: ['coffeelint:browser', 'coffee:browser']
         options:
           spawn: false
 
     # Check for syntax
     coffeelint:
       gruntfile: ['Gruntfile.coffee']
-      sources: ['src/**/*.coffee']
+      node: ['controllers/coffee/**/*.coffee']
+      browser: ['public/coffee/**/*.coffee']
       options:
         configFile: 'coffeelint.json'
 
@@ -28,14 +33,16 @@ module.exports = (grunt) ->
       node:
         expand: true
         flatten: false
-        cwd: 'src/controllers/'
+        cwd: 'controllers/coffee/'
         src: ['**/*.coffee']
-        dest: './controllers/'
+        dest: './controllers/js/'
         ext: '.js'
       browser:
+        options:
+          bare: true
         expand: true
         flatten: false
-        cwd: 'src/public/js/'
+        cwd: 'public/coffee/'
         src: ['**/*.coffee']
         dest: './public/js/'
         ext: '.js'
@@ -47,8 +54,8 @@ module.exports = (grunt) ->
 
   # default task(s)
   grunt.registerTask 'default', [
-    'coffeelint:gruntfile', 'coffeelint:sources',
-    'coffee:node', 'coffee:browser',
+    'coffeelint',
+    'coffee',
     'debug',
     'watch'
   ]

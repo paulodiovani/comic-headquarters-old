@@ -26,3 +26,5 @@ node_modules
 
 # total.js files
 tmp
+controllers/js/*
+public/js/*
