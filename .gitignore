@@ -28,3 +28,4 @@ node_modules
 tmp
 controllers/js/*
 public/js/*
+public/lib/*
