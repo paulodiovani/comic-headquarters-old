@@ -1,5 +1,8 @@
-name                     : Comic Headquarters
-author                   : Comic Headquarters
+name                 : Comic Headquarters
+author               : Paulo Diovani, Julio Matos
+
+//paths
+directory-controllers: /controllers/js/
 
 // Mail settings
 //mail.smtp                : smtp.yourwebsite.com

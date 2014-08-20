@@ -1,6 +1,5 @@
 # Framework
 exports.install = (framework) ->
-  framework.route "/", view_homepage
   framework.route "#400", error400
   framework.route "#401", error401
   framework.route "#403", error403
@@ -8,12 +7,6 @@ exports.install = (framework) ->
   framework.route "#408", error408
   framework.route "#431", error431
   framework.route "#500", error500
-  return
-
-# Home
-view_homepage = ->
-  self = this
-  self.view "homepage"
   return
 
 # Bad Request
