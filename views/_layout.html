@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    @{css('cover.css')}
-    @{css('roller.css')}
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
-    @{js('default.js')}
+    @{css('cover.css')}
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     @{js('ie10-viewport-bug-workaround.js')}
@@ -35,16 +35,16 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
-          <!-- <div class="masthead clearfix">
+          <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">Comic Headquarters</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="@{if controller.url == '/'} active @{endif}"><a href="/">Início</a></li>
+                <li class="@{if controller.url == '/subscribe/'} active @{endif}"><a href="/subscribe">Assinar</a></li>
+                <li class="@{if controller.url == '/contact/'} active @{endif}"><a href="/contact">Contato</a></li>
               </ul>
             </div>
-          </div> -->
+          </div>
 
           <div class="inner cover">
             @{body}
@@ -52,7 +52,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>&copy; 2014 Comic HQ</p>
+              <p>&copy; 2014 <a href="http://webcomic.com.br">Comic HQ</a></p>
               <!-- Cover template for Bootstrap, by @mdo. -->
             </div>
           </div>
@@ -65,7 +65,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- Bootstrap JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <!-- @{js('default.js')} -->
   </body>
 </html>

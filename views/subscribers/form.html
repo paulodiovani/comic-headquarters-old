@@ -1,19 +1,27 @@
-<form role="form" action="subscribe" method="post">
-  <div class="form-group">
-    <label for="subscriptionType">Tipo de inscrição</label>
-    <select id="subscriptionType" class="form-control" name="type">
-        <option value="1">Leitor de quadrinhos</option>
-        <option value="2">Autor de quadrinhos</option>
-    </select>
-    <span class="help-block">Qual será seu principal uso para a plataforma?</span>
-  </div>
-    
-  <div class="form-group">
-    <label for="emailAddress">Endereço de e-mail</label>
-    <input type="email" id="emailAddress" class="form-control" name="email" placeholder="Digite seu e-mail">
-    <span class="help-block">Entre com seu endereço de e-mail para receber informações sobre o Comic headquarters.</span>
-  </div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <form id="subscriber" role="form" action="/subscribe" method="post">
+      <div class="form-group">
+        <label for="subscriptionType">Tipo de inscrição</label>
+        <select id="subscriptionType" class="form-control" name="type">
+            <option value="1">Leitor de quadrinhos</option>
+            <option value="2">Autor de quadrinhos</option>
+        </select>
+        <span class="help-block">Qual será seu principal uso para a plataforma?</span>
+      </div>
+        
+      <div class="form-group">
+        <label for="emailAddress">Endereço de e-mail</label>
+        <input type="email" id="emailAddress" class="form-control" name="email" placeholder="Digite seu e-mail">
+        <span class="help-block">Entre com seu endereço de e-mail para receber informações sobre o Comic Headquarters.</span>
+      </div>
 
-  <button type="submit" class="btn btn-primary">Assinar</button>
-  <a href="/" class="btn btn-default">Voltar</a>
-</form>
+      <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Assinar</button>
+        </div>
+        <a href="/" class="btn btn-default">Voltar</a>
+      </div>
+    </form>
+  </div>
+</div>

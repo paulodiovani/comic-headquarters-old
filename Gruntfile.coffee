@@ -10,8 +10,8 @@ module.exports = (grunt) ->
         files: ['Gruntfile.coffee']
         tasks: ['coffeelint:gruntfile']
       node:
-        files: ['controllers/coffee/**/*.coffee']
-        tasks: ['coffeelint:node', 'coffee:node',]
+        files: ['controllers/coffee/**/*.coffee', 'models/coffee/**/*.coffee']
+        tasks: ['coffeelint:node', 'coffee:controllers', 'coffee:models']
         options:
           spawn: false
       browser:
@@ -23,19 +23,26 @@ module.exports = (grunt) ->
     # Check for syntax
     coffeelint:
       gruntfile: ['Gruntfile.coffee']
-      node: ['controllers/coffee/**/*.coffee']
+      node: ['controllers/coffee/**/*.coffee', 'models/coffee/**/*.coffee']
       browser: ['public/coffee/**/*.coffee']
       options:
         configFile: 'coffeelint.json'
 
     # Compile files
     coffee:
-      node:
+      controllers:
         expand: true
         flatten: false
         cwd: 'controllers/coffee/'
         src: ['**/*.coffee']
         dest: './controllers/js/'
+        ext: '.js'
+      models:
+        expand: true
+        flatten: false
+        cwd: 'models/coffee/'
+        src: ['**/*.coffee']
+        dest: './models/js/'
         ext: '.js'
       browser:
         options:

@@ -3,7 +3,8 @@
 
   exports.install = function(framework) {
     framework.route("/", home);
-    return framework.route("/subscribe", subscribe);
+    framework.route("/subscribe", subscribe);
+    return framework.route("/subscribe", subscribe, ['post']);
   };
 
   home = function() {
@@ -11,7 +12,14 @@
   };
 
   subscribe = function() {
-    return this.view("form");
+    var Subscriber, post, self;
+    self = this;
+    post = self.post;
+    if (post.email) {
+      Subscriber = self.model('subscriber');
+      Subscriber.save(post);
+    }
+    return self.view("form");
   };
 
 }).call(this);

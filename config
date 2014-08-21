@@ -3,6 +3,7 @@ author               : Paulo Diovani, Julio Matos
 
 //paths
 directory-controllers: /controllers/js/
+directory-models     : /models/js/
 
 // Mail settings
 //mail.smtp                : smtp.yourwebsite.com
