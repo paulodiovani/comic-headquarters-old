@@ -15,7 +15,8 @@ subscribe = ->
 
   if post.email
     Subscriber = self.model('subscriber')
-    Subscriber.save post
+    Subscriber.save post, (err, subscriber) ->
+      self.view "form", {subscribed: true}
 
   # TODO: save the e-mail and show a message
 

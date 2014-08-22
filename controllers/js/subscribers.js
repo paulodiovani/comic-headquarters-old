@@ -17,7 +17,11 @@
     post = self.post;
     if (post.email) {
       Subscriber = self.model('subscriber');
-      Subscriber.save(post);
+      Subscriber.save(post, function(err, subscriber) {
+        return self.view("form", {
+          subscribed: true
+        });
+      });
     }
     return self.view("form");
   };
