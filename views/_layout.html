@@ -18,6 +18,7 @@
     <!-- Font Awesome -->
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
+    @{css('common.css')}
     @{css('cover.css')}
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -37,7 +38,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Comic Headquarters</h3>
+              <!-- <h3 class="masthead-brand">Comic Headquarters</h3> -->
               <ul class="nav masthead-nav">
                 <li class="@{if controller.url == '/'} active @{endif}"><a href="/">Início</a></li>
                 <li class="@{if controller.url == '/subscribe/'} active @{endif}"><a href="/subscribe">Assinar</a></li>
