@@ -7,7 +7,7 @@
     created: Date
   });
 
-  Subscriber = mongoose.model('user', userSchema);
+  Subscriber = mongoose.model('subscriber', subscriberSchema);
 
   exports.name = 'subscriber';
 
@@ -16,8 +16,11 @@
       email: data.email
     }, function(err, records) {
       var subs;
-      if (records.length > 0) {
-        return callback("E-mail já cadastrado");
+      if (err) {
+        console.error(err);
+        return callback("Ocorreu um erro ao inscrever seu endereço de e-mail. Tente novamente mais tarde");
+      } else if (records.length > 0) {
+        return callback("Endereço de e-mail já inscrito");
       } else {
         subs = new Subscriber({
           email: data.email,
