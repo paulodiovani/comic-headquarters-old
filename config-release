@@ -1,5 +1,6 @@
 default-ip               : 127.0.0.1
 default-port             : 80
+mongodb-url              : mongodb://admin:qjYj1ZI2Sdl_@$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/webcomic
 
 secret                   : your-secret-key
 version                  : 0.1.0

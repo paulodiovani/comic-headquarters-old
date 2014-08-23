@@ -1,4 +1,4 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/comichq');
+mongoose.connect(framework.config['mongodb-url']);
 
 global.mongoose = mongoose;

@@ -1,5 +1,6 @@
 default-ip               : 127.0.0.1
 default-port             : 8000
+mongodb-url              : mongodb://localhost/comichq
 
 secret                   : your-secret-key
 version                  : 0.1.0
