@@ -3,8 +3,8 @@
 angular.module 'comicHqApp'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
-    title: 'Home'
-    link: '/'
+    {title: 'Início', link: '/'},
+    {title: 'Assinar', link: '/subscribe'},
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn

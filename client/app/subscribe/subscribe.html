@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="alert" role="alert" ng-class="{
+          'alert-success': $scope.success && submitted,
+          'alert-warn': $scope.error && submitted
+        }">
+      <h4>{{$scope.messageTitle}}</h4>
+      {{$scope.message}}
+    </div>
+
+    <form id="subscriber" role="form" ng-submit="register(form)" novalidate>
+      <div class="form-group">
+        <label for="emailAddress">Endereço de e-mail</label>
+        <input type="email" id="emailAddress" class="form-control" name="email" placeholder="Digite seu e-mail" ng-model="subscriber.email" required>
+        <span class="help-block" ng-show="form.name.$error.required && submitted">Campo obrigatório.</span>
+        <span class="help-block">Entre com seu endereço de e-mail para receber informações sobre o Comic Headquarters.</span>
+      </div>
+
+      <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <button type="submit" name="type" value="reader" class="btn btn-primary" ng-model="subscriber.type"><i class="glyphicon glyphicon-user"></i> Eu leio quadrinhos online</button>
+        </div>
+        <div class="btn-group">
+          <button type="submit" name="type" value="author" class="btn btn-info" ng-model="subscriber.type"><i class="glyphicon glyphicon-pencil"></i> Sou desenhista/autor de quadrinhos</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

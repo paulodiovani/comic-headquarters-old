@@ -3,7 +3,7 @@
 angular.module 'comicHqApp'
 .config ($stateProvider) ->
   $stateProvider
-  .state 'main',
+  .state 'cover',
     url: '/'
-    templateUrl: 'app/main/main.html'
-    controller: 'MainCtrl'
+    templateUrl: 'app/cover/cover.html'
+    controller: 'CoverCtrl'
