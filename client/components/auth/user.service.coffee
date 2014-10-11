@@ -2,9 +2,7 @@
 
 angular.module 'comicHqApp'
 .factory 'User', ($resource) ->
-  $resource '/api/users/:id/:controller',
-    id: '@_id'
-  ,
+  $resource '/api/users/:id/:controller', {id: '@_id'},
     changePassword:
       method: 'PUT'
       params:
