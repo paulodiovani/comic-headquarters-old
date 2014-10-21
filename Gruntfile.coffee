@@ -77,7 +77,6 @@ module.exports = (grunt) ->
         ]
         tasks: [
           "newer:jshint:all"
-          "karma"
         ]
 
       coffeeClient:
@@ -96,10 +95,6 @@ module.exports = (grunt) ->
           "!<%= yeoman.server %>/api.coffee/**/*.spec.{coffee,litcoffee,coffee.md}"
         ]
         tasks: ["newer:coffee:server"]
-
-      coffeeTest:
-        files: ["<%= yeoman.client %>/{app,components}/**/*.spec.{coffee,litcoffee,coffee.md}"]
-        tasks: ["karma"]
 
       gruntfile:
         files: ["Gruntfile.js"]
@@ -405,13 +400,7 @@ module.exports = (grunt) ->
         "svgmin"
       ]
 
-    
     # Test settings
-    karma:
-      unit:
-        configFile: "karma.conf.js"
-        singleRun: true
-
     mochaTest:
       options:
         reporter: "spec"
@@ -575,7 +564,6 @@ module.exports = (grunt) ->
         "concurrent:test"
         "injector"
         "autoprefixer"
-        "karma"
       ]
     else if target is "e2e"
       grunt.task.run [
