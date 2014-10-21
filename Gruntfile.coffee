@@ -92,8 +92,8 @@ module.exports = (grunt) ->
 
       coffeeServer:
         files: [
-          "<%= yeoman.server %>/{api.coffee}/**/*.{coffee,litcoffee,coffee.md}"
-          "!<%= yeoman.server %>/{api.coffee}/**/*.spec.{coffee,litcoffee,coffee.md}"
+          "<%= yeoman.server %>/api.coffee/**/*.{coffee,litcoffee,coffee.md}"
+          "!<%= yeoman.server %>/api.coffee/**/*.spec.{coffee,litcoffee,coffee.md}"
         ]
         tasks: ["newer:coffee:server"]
 
@@ -442,11 +442,12 @@ module.exports = (grunt) ->
     coffee:
       options:
         sourceMap: true
-        sourceRoot: ""
+        # sourceRoot: ""
 
       client:
         files: [
           expand: true
+          extDot: "last"
           cwd: "client"
           src: [
             "{app,components}/**/*.coffee"
@@ -457,8 +458,11 @@ module.exports = (grunt) ->
         ]
 
       server:
+        options:
+          bare: true
         files: [
           expand: true
+          extDot: "last"
           cwd: "server/api.coffee"
           src: [
             "**/*.coffee"

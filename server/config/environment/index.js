@@ -41,6 +41,10 @@ var all = {
     }
   },
 
+  mailchimp: {
+    apikey: process.env.MAILCHIMP_APIKEY || 'apikey'
+  },
+
   facebook: {
     clientID:     process.env.FACEBOOK_ID || 'id',
     clientSecret: process.env.FACEBOOK_SECRET || 'secret',
