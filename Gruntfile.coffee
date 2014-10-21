@@ -588,7 +588,7 @@ module.exports = (grunt) ->
     else
       grunt.task.run [
         "test:server"
-        "test:client"
+        # "test:client"
       ]
 
   grunt.registerTask "build", [
