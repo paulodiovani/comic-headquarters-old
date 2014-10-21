@@ -5,8 +5,8 @@ angular.module 'comicHqApp'
   $stateProvider
   .state 'cover',
     url: '/'
-    templateUrl: 'app/subscribers/cover.html'
+    templateUrl: 'app/subscriber/cover.html'
   .state 'subscribe',
     url: '/subscribe'
-    templateUrl: 'app/subscribers/subscribe.html'
-    controller: 'SubscribersCtrl'
+    templateUrl: 'app/subscriber/subscribe.html'
+    controller: 'SubscriberCtrl'

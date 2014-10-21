@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'comicHqApp'
-.controller 'SubscribersCtrl', ($scope, Subscriber, $location) ->
+.controller 'SubscriberCtrl', ($scope, Subscriber, $location) ->
   $scope.subscriber = {}
   $scope.errors = {}
 
