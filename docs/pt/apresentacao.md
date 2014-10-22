@@ -34,10 +34,10 @@ Cada perfil de usuário terá disponíveis diferentes funções e termos do site
         2. Pertencente a domínio público
 3. Cada conta de usuário _Autor_ terá um limite de armazenamento para a publicação de suas _séries_
     1. Este limite de armazenamento será definido de acordo com as tecnologias utilizadas no projeto, mas deverá ser o suficiente para a publicação de uma _série_ longa ou várias _séries_ pequenas
-4. Cada _série_ poderá ser divulgada em redes sociais, útilizando ferramentas de integração da _plataforma Comic HQ_
-5. Cada _série_ será contida por imagens estáticas, chamadas aqui de _episódios_, a serem publicadas em separado, obedecendo uma progressão da história -- cada _episódio_ dará sequencia a história do _episódio_ anterior
-6. A _plataforma Comic HQ_ oferecerá ferramentas para publicação desses _episódios_, seja para publicação imediata ou agendamento
-7. A _plataforma Comic HQ_ oferecerá informações para monitoramento da aceitação das _séries_, incluindo quais _episódios_ foram mais visualizados e comentados em redes sociais
+4. Cada _série_ poderá ser divulgada em redes sociais, útilizando ferramentas de integração da _plataforma Comic HQ_.
+5. Cada _série_ será contida por _episódios_, estes contendo uma ou mais imagens estáticas, chamadas aqui de _quadros_, a serem publicadas em separado, obedecendo uma progressão da história -- cada _quadro_ dará sequencia a história do _quadro_ anterior.
+6. A _plataforma Comic HQ_ oferecerá ferramentas para publicação desses _episódios_ e _quadros_, seja para publicação imediata ou agendamento.
+7. A _plataforma Comic HQ_ oferecerá informações para monitoramento da aceitação das _séries_, incluindo quais _episódios_ foram mais visualizados e comentados.
 8. Para cada série, o _autor_ poderá escolher uma _tema visual_ para o site, inclusive entre _temas_ exclusivos, desenvolvidos especialmente parar sua _série_
     1. _Temas livres_ poderão ser escolhidos livremente, a partir dos disponíveis
     2. _Temas exclusivos_ poderão ser escolhidos ou encomendados mediante o pagamento de um valor, variável de acordo com o _tema_
@@ -58,7 +58,18 @@ Obs: As opções de rentabilização poderá ser alterada sem aviso prévio pelo
 
 Obs 2: As opções de rentabilização são ideias a serem implementadas a longo prazo, não estando disponíveis logo no início da publicação da _plataforma Comic HQ_
 
-### 1.4.1 Patrocínio direto
+### 1.4.1 Assinatura de leitores
+
+1. _Leitores_ poderão _assinar_ suas _séries_ favoritas mediante o pagamento de um valor mensal, com intenção de incentivar a publicar regular da série.
+2. Este valor será dividido entre o _autor_ e a _plataforma Comic HQ_.
+3. O _Leitor_ poderá cancelar esta _assinatura_ a qualquer momento.
+
+#### 1.4.1.1 Séries exclusivas
+
+1. _Autores_ poderão optar por criar _séries_, ou temporadas de séries, exclusivas para assinantes.
+2. Estas _séries_ estarão disponíveis para leitura apenas pelos leitores que forem assinantes da mesma, enquanto tais leitores mantiverem suas assinaturas em dia.
+
+### 1.4.2 Patrocínio direto
 
 1. Para as _séries_ mais populares, será oferecida a opção de patrocício por alguns apoiadores do projeto.
 2. Este patrocínio será concedido via contrato firmado entre as três partes envolvidas:
@@ -68,15 +79,9 @@ Obs 2: As opções de rentabilização são ideias a serem implementadas a longo
 3. Uma vez definido o patrocínio, a marca ou logo do _patrocinador_, assim como um link para _website_ próprio, estarão visíveis no _website_ da _série_ escolhida, sem que prejudique a visibilidade dos _eposídios_.
 4. Adicionalmente, antes do início e ao final de cada _temporada_ e/ou ao final da _série_ como um todo, será exibido um _episódio_ indicando que esta _série_ é patrocinada pelo _patrocinador_.
 
-### 1.4.2 Publicação física
+### 1.4.3 Publicação física
 
 1. Para as _séries_ que alcançarem um _grande destaque_ na _Plataforma Comic HQ_ será oferecida a possibilidade de publicação física.
 2. Esta publicação será feita ao final da _série_ ou ao final de cada _temporada_, dependendo do tamanho e popularidade da série.
 3. No caso de sua _série_ ter sido escolhida para publicação física, o _autor_ deverá se disponibilizar para a criação de conteúdo extra -- exclusivo da versão física, e não publicada _online_, e não publicada na _plataforma Comic HQ_.
 3. No caso de sua _série_ ter sido escolhida para publicação física, o _autor_ irá, opcionalmente, se disponibilizar para comparecimento em convenções de HQ, entrevistas e outras formas de divulgação.
-
-### 1.4.3 Assinatura de leitores
-
-1. _Leitores_ poderão _assinar_ suas _séries_ favoritas mediante o pagamento de um valor mensal, com intenção de incentivar a publicar regular da série.
-2. Este valor será dividido entre o _autor_ e a _plataforma Comic HQ_.
-3. O _Leitor_ poderá cancelar esta _assinatura_ a qualquer momento.
