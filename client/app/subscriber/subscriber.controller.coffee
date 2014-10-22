@@ -1,12 +1,14 @@
-'use strict'
-
 angular.module 'comicHqApp'
 .controller 'SubscriberCtrl', ($scope, Subscriber, $location) ->
   $scope.subscriber = {}
   $scope.errors = {}
 
   $scope.register = (form) ->
-    $scope.submitted = true
+    $scope.submitted      = true
+    $scope.messageSuccess = false
+    $scope.messageWarning = false
+    $scope.messageError   = false
+    $scope.message        = "Aguarde..."
 
     if form.$valid
       subscriber = new Subscriber
@@ -15,12 +17,23 @@ angular.module 'comicHqApp'
       
       subscriber.$save()
       .then (data, headers) ->
-        console.log 'success', data, headers
+        $scope.messageSuccess = true
+        $scope.messageTitle = 'Registrado com sucesso.'
+        $scope.message = 'Verifique seu e-mail para completar a inscrição.'
       .catch (headers) ->
-        console.error 'failed', headers
-        # err = err.data
-        # $scope.errors = {}
-      
+        $scope.messageError = true
+        $scope.messageTitle = 'Erro!'
+        $scope.message = 'Houve um problema ao fazer seu registro.
+          Favor, tente novamente mais tarde'
+    else
+      $scope.messageWarning = true
+      $scope.message = 'Não foi possível registrar. Verifique o campo abaixo.'
 
   $scope.setType = (type, $event) ->
     $scope.subscriber.type = type
+
+  $scope.clearMessages = ->
+    $scope.submitted    = false
+    $scope.messageError = false
+    $scope.messageTitle = null
+    $scope.message      = null

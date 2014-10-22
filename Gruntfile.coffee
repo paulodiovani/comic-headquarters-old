@@ -431,9 +431,10 @@ module.exports = (grunt) ->
     coffee:
       options:
         sourceMap: true
-        # sourceRoot: ""
 
       client:
+        options:
+          sourceRoot: ""
         files: [
           expand: true
           extDot: "last"
