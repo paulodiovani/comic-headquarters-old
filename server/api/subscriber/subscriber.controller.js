@@ -22,7 +22,7 @@ exports.subscribe = function(req, res) {
       groupings: [
         {
           id: intGroupId,
-          groupd: [groupName]
+          groups: [groupName]
         }
       ]
     }
