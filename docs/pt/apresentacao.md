@@ -26,7 +26,7 @@ Cada perfil de usuário terá disponíveis diferentes funções e termos do site
 
 ### 1.3.1 Autores
 
-1. Cada usuário _autor_ cadatrado na _plataforma Comic HQ_ poderá criar uma ou mais _séries_ de quadrinhoss a serem publicados no website
+1. Cada usuário _autor_ cadastrado na _plataforma Comic HQ_ poderá criar uma ou mais _séries_ de quadrinhoss a serem publicados no website
     1. Por _série_, entende-se uma história única, que pode ser dividida em arcos e/ou temporadas menores, ou conjunto de histórias ligadas por características em comum, sejam personagens, cenário, etc.
 2. Cada _série_ deve conter uma história e personagens _originais_, isto é, de autoria do próprio usuário.
     1. Personagens não originais podem ser utilizados se:
