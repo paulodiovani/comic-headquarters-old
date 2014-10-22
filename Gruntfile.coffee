@@ -13,7 +13,6 @@ module.exports = (grunt) ->
     useminPrepare: "grunt-usemin"
     ngtemplates: "grunt-angular-templates"
     cdnify: "grunt-google-cdn"
-    protractor: "grunt-protractor-runner"
     injector: "grunt-asset-injector"
     buildcontrol: "grunt-build-control"
   
@@ -408,15 +407,6 @@ module.exports = (grunt) ->
 
       src: ["server/**/*.spec.coffee"]
 
-    protractor:
-      options:
-        configFile: "protractor.conf.js"
-
-      chrome:
-        options:
-          args:
-            browser: "chrome"
-
     env:
       test:
         NODE_ENV: "test"
@@ -551,38 +541,12 @@ module.exports = (grunt) ->
     grunt.log.warn "The `server` task has been deprecated. Use `grunt serve` to start a server."
     grunt.task.run ["serve"]
 
-  grunt.registerTask "test", (target) ->
-    if target is "server"
-      grunt.task.run [
-        "env:all"
-        "env:test"
-        "mochaTest"
-      ]
-    else if target is "client"
-      grunt.task.run [
-        "clean:server"
-        "env:all"
-        "concurrent:test"
-        "injector"
-        "autoprefixer"
-      ]
-    else if target is "e2e"
-      grunt.task.run [
-        "clean:server"
-        "env:all"
-        "env:test"
-        "concurrent:test"
-        "injector"
-        "wiredep"
-        "autoprefixer"
-        "express:dev"
-        "protractor"
-      ]
-    else
-      grunt.task.run [
-        "test:server"
-        # "test:client"
-      ]
+  grunt.registerTask "test", () ->
+    grunt.task.run [
+      "env:all"
+      "env:test"
+      "mochaTest"
+    ]
 
   grunt.registerTask "build", [
     "clean:dist"
