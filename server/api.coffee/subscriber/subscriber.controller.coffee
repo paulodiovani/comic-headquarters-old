@@ -19,7 +19,7 @@ exports.subscribe = (req, res) ->
     merge_vars:
       groupings: [
         id: intGroupId
-        groupd: [groupName]
+        groups: [groupName]
       ]
   , (data) ->
     res.send 201, data
