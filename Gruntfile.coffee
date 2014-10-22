@@ -541,7 +541,7 @@ module.exports = (grunt) ->
     grunt.log.warn "The `server` task has been deprecated. Use `grunt serve` to start a server."
     grunt.task.run ["serve"]
 
-  grunt.registerTask "test", () ->
+  grunt.registerTask "test", ->
     grunt.task.run [
       "env:all"
       "env:test"
