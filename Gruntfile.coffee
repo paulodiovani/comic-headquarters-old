@@ -565,6 +565,16 @@ module.exports = (grunt) ->
     "rev"
     "usemin"
   ]
+
+  grunt.registerTask "deploy", (target) ->
+    if not target?
+      grunt.log.warn "You must provide a target for deploy task."
+      return
+    grunt.task.run [
+      "build"
+      "buildcontrol:#{target}"
+    ]
+
   grunt.registerTask "default", [
     "newer:jshint"
     "test"
