@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "index.js",
-  "sourceRoot": "../../api.coffee/subscriber/",
+  "sourceRoot": "../../../src/api/subscriber/",
   "sources": [
     "index.coffee"
   ],

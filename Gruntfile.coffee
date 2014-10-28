@@ -29,6 +29,7 @@ module.exports = (grunt) ->
       # configurable paths
       client: require("./bower.json").appPath or "client"
       server: "server"
+      src: "src"
       dist: "dist"
 
     express:
@@ -90,8 +91,8 @@ module.exports = (grunt) ->
 
       coffeeServer:
         files: [
-          "<%= yeoman.server %>/api.coffee/**/*.{coffee,litcoffee,coffee.md}"
-          "!<%= yeoman.server %>/api.coffee/**/*.spec.{coffee,litcoffee,coffee.md}"
+          "<%= yeoman.src %>/**/*.{coffee,litcoffee,coffee.md}"
+          "!<%= yeoman.src %>/**/*.spec.{coffee,litcoffee,coffee.md}"
         ]
         tasks: ["newer:coffee:server"]
 
@@ -129,18 +130,18 @@ module.exports = (grunt) ->
 
       server:
         options:
-          jshintrc: "server/.jshintrc"
+          jshintrc: "<%= yeoman.server %>/.jshintrc"
 
         src: [
-          "server/**/*.js"
-          "!server/**/*.spec.js"
+          "<%= yeoman.server %>/**/*.js"
+          "!<%= yeoman.server %>/**/*.spec.js"
         ]
 
       serverTest:
         options:
-          jshintrc: "server/.jshintrc-spec"
+          jshintrc: "<%= yeoman.server %>/.jshintrc-spec"
 
-        src: ["server/**/*.spec.js"]
+        src: ["<%= yeoman.server %>/**/*.spec.js"]
 
       all: [
         "<%= yeoman.client %>/{app,components}/**/*.js"
@@ -405,7 +406,7 @@ module.exports = (grunt) ->
         reporter: "spec"
         require: "coffee-script/register"
 
-      src: ["server/**/*.spec.coffee"]
+      src: ["<%= yeoman.src %>/**/*.spec.coffee"]
 
     env:
       test:
@@ -443,12 +444,12 @@ module.exports = (grunt) ->
         files: [
           expand: true
           extDot: "last"
-          cwd: "server/api.coffee"
+          cwd: "<%= yeoman.src %>"
           src: [
             "**/*.coffee"
             "!**/*.spec.coffee"
           ]
-          dest: "server/api"
+          dest: "server"
           ext: ".js"
         ]
 
