@@ -14,7 +14,9 @@ module.exports = function(app) {
   app.use('/api/subscribers', require('./api/subscriber'));
 
   app.use('/auth', require('./auth'));
-  
+
+  app.use('/markdown/:name', require('./components/markdown')(app));
+
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);
