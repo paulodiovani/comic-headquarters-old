@@ -1,6 +1,7 @@
 expect = require('chai').expect
-app    = require('../../app')
-User   = require('../../api/user/user.model')
+
+app    = require('../../../server/app')
+User   = require('../../../server/api/user/user.model')
 
 user = new User
   provider: 'local',
@@ -40,4 +41,4 @@ describe 'User Model', ->
     expect(user.authenticate('password')).to.be.true
 
   it 'not authenticate user if password is invalid', ->
-    return expect(user.authenticate('blah')).not.be.true
+    expect(user.authenticate('blah')).not.be.true

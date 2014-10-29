@@ -1,7 +1,7 @@
 expect = require('chai').expect
 mcapi = require('mailchimp-api/mailchimp')
 
-config = require('../../config/environment')
+config = require('../../../server/config/environment')
 
 mc = new mcapi.Mailchimp config.mailchimp.apikey
 

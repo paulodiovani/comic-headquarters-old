@@ -1,6 +1,7 @@
 expect  = require('chai').expect
-app     = require('../../app')
 request = require('supertest')
+ 
+app     = require('../../../server/app')
 
 describe 'GET /api/things', ->
 
