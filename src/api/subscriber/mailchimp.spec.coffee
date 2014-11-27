@@ -11,7 +11,7 @@ listName = 'Comic Headquarters'
 
 # Grupo de interesse
 intGroupId   = 11265
-intGroupName = 'Web comics'
+intGroupName = 'Perfil'
 
 describe 'MailChimp', ->
   @timeout 5000
