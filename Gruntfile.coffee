@@ -569,7 +569,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "deploy", (target) ->
     if not target?
-      grunt.log.warn "You must provide a target for deploy task."
+      grunt.log.warn "You must provide a target for deploy task."['yellow'].bold
       return
     grunt.task.run [
       "build"
